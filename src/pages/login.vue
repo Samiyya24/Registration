@@ -1,15 +1,15 @@
 <script setup>
 import { ref, reactive } from "vue";
-import api from "../api/index.js";
+import api from "../api";
 import { useRouter } from "vue-router";
 const router = useRouter();
-const userData = reactive({ username: "", password: "" });
+const userData = reactive({ email: "", password: "" });
 const loginUser = () => {
   api
-    .post("/auth/login", userData)
+    .post("admins/login", userData)
     .then((res) => {
       localStorage.setItem("user", JSON.stringify(res.data));
-      router.push("/");
+      router.push("/admin/home");
       console.log("res", res);
     })
     .catch((err) => {
@@ -31,7 +31,7 @@ const loginUser = () => {
         <div class="mb-5">
           <label class="mb-2" for="">Email</label>
           <input
-            v-model="userData.username"
+            v-model="userData.email"
             type="text"
             class="block border w-full p-[15px] focus:border-yellow-400 outline-none"
             placeholder="Enter your email"

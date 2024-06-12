@@ -4,16 +4,21 @@ const user = ref("");
 user.value = JSON.parse(localStorage.getItem("user"));
 </script>
 <template>
-  <div class="bg-[#F2EAE1] h-screen px-16 py-8">
+  <div class="bg-[#F2EAE1] h-screen px-10 py-8">
     <img class="h-10" src="/icons/Logo.svg" alt="" />
-    <div class="flex items-center my-10 gap-5">
-      <img class="w-8 h-8 rounded-full" :src="user.image" alt="" />
-      <h2 class="font-medium text-2xl">{{ user.firstName }}</h2>
+    <div class="text-center my-10 gap-5 mb-52">
+      <img
+        class="w-10 h-10 rounded-full mx-auto mb-5"
+        :src="user.image_url"
+        alt=""
+      />
+      <h2 class="font-medium text-xl">{{ user.full_name }}</h2>
+      <!-- <h2 class="font-medium text-2xl">{{ user.lastName }}</h2> -->
     </div>
-    <div class="flex flex-col gap-6">
+    <div class="flex flex-col gap-6 px-10 items-center">
       <router-link
-        class="flex gap-4 items-center"
-        to="/"
+        class="flex gap-4 items-center py-3 pl-12 w-[200px] rounded-md"
+        to="/home"
         active-class="active-link"
         ><svg
           width="19"
@@ -36,7 +41,10 @@ user.value = JSON.parse(localStorage.getItem("user"));
         </svg>
         Home</router-link
       >
-      <router-link class="flex gap-4 items-center" to="/Course"
+      <router-link
+        class="flex gap-4 items-center py-3 pl-12 w-[200px] rounded-md"
+        to="/Course"
+        active-class="active-link"
         ><svg
           width="12"
           height="15"
@@ -63,7 +71,10 @@ user.value = JSON.parse(localStorage.getItem("user"));
         </svg>
         Course</router-link
       >
-      <router-link class="flex gap-4 items-center" to="/Students"
+      <router-link
+        class="flex gap-4 items-center py-3 pl-12 w-[200px] rounded-md"
+        to="/Students"
+        active-class="active-link"
         ><svg
           width="20"
           height="16"
@@ -78,7 +89,10 @@ user.value = JSON.parse(localStorage.getItem("user"));
         </svg>
         Students</router-link
       >
-      <router-link class="flex gap-4 items-center" to="/Payment"
+      <router-link
+        class="flex gap-4 items-center py-3 pl-12 w-[200px] rounded-md"
+        to="/Payment"
+        active-class="active-link"
         ><svg
           width="15"
           height="17"
@@ -93,7 +107,10 @@ user.value = JSON.parse(localStorage.getItem("user"));
         </svg>
         Payment</router-link
       >
-      <router-link class="flex gap-4 items-center" to="/Report"
+      <router-link
+        class="flex gap-4 items-center py-3 pl-12 w-[200px] rounded-md"
+        to="/Report"
+        active-class="active-link"
         ><svg
           width="13"
           height="17"
@@ -115,7 +132,10 @@ user.value = JSON.parse(localStorage.getItem("user"));
         </svg>
         Report</router-link
       >
-      <router-link class="flex gap-4 items-center" to="/Settings"
+      <router-link
+        class="flex gap-4 items-center py-3 pl-12 w-[200px] rounded-md"
+        to="/Settings"
+        active-class="active-link"
         ><svg
           width="15"
           height="17"
@@ -131,7 +151,7 @@ user.value = JSON.parse(localStorage.getItem("user"));
         Settings</router-link
       >
     </div>
-    <router-link class="flex gap-4 items-center" to=""
+    <router-link class="flex gap-4 items-center justify-center mt-36" to=""
       >Logout<svg
         width="17"
         height="17"
@@ -150,8 +170,6 @@ user.value = JSON.parse(localStorage.getItem("user"));
 
 <style scoped>
 .active-link {
-  padding: 13px 41px;
   background-color: #feaf00;
-  border-radius: 4px;
 }
 </style>
