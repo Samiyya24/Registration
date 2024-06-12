@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="flex justify-between px-10 py-7">
+    <div class="flex justify-between px-10 py-7 shadow-md">
       <span
         ><svg
           width="18"
