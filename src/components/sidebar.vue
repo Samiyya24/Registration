@@ -143,7 +143,7 @@ user.value = JSON.parse(localStorage.getItem("user"));
     </div>
     <router-link
       class="flex gap-4 items-center justify-center mt-36"
-      to="/auth/login"
+      to="/"
       >Logout<svg
         width="17"
         height="17"
