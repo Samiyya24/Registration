@@ -6,7 +6,7 @@ import { RouterView } from "vue-router";
 
 <template>
   <main class="">
-    <div class="grid grid-cols-6">
+    <div class="grid grid-cols-6 relative">
       <div class="col-span-1"><Sidebar /></div>
       <div class="col-span-5"><Navbar /><RouterView /></div>
     </div>

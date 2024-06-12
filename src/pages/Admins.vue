@@ -1,10 +1,10 @@
 <script setup>
-import UsersList from "../components/UsersList.vue";
+import AdminsList from "../components/AdminsList.vue";
 </script>
 <template>
   <div class="bg-[#F8F8F8] h-screen w-full">
     <div class="flex justify-between items-center py-10 shadow-sm w-full px-10">
-      <h1 class="text-2xl font-bold">Users List</h1>
+      <h1 class="text-2xl font-bold">Admins List</h1>
       <div class="flex items-center gap-8">
         <span
           ><svg
@@ -28,11 +28,11 @@ import UsersList from "../components/UsersList.vue";
           </svg>
         </span>
         <button class="py-3 px-7 rounded bg-blue-300 text-white">
-          ADD NEW USER
+          ADD NEW ADMIN
         </button>
       </div>
     </div>
-    <UsersList />
+    <AdminsList />
   </div>
 </template>
 
