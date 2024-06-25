@@ -56,7 +56,7 @@ const fetchAdmins = async () => {
         headers: {
           accept: "application/json",
           Authorization:
-            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MTg5MjUyNTgsImlhdCI6MTcxODIwNTI1OCwiaXNzIjoiIiwicm9sZSI6InN1ZG8iLCJzdWIiOiIyZTljYTI3Ni01Nzk5LTRmMzQtYTBhNi05MzhmN2IwYTVjOGQifQ.vG377oKJy4IwE_tp8ob2CJXDRsRP3nAS_kMQkqRkQa0",
+            "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MjAwMTIwNjEsImlhdCI6MTcxOTI5MjA2MSwiaXNzIjoiIiwicm9sZSI6InN1ZG8iLCJzdWIiOiIyZTljYTI3Ni01Nzk5LTRmMzQtYTBhNi05MzhmN2IwYTVjOGQifQ.SxlMiwU-pEnVdWWccYiq3x7jqLw1InmidLK6BHuaWqk",
         },
       }
     );
@@ -64,6 +64,7 @@ const fetchAdmins = async () => {
     console.log(admins.value);
   } catch (error) {
     console.error("Error fetching admins:", error);
+    console.log(admins.value);
   }
 };
 

@@ -36,6 +36,7 @@ const loginUser = () => {
           <label class="mb-2" for="">Email</label>
           <input
             v-model="userData.email"
+            autocomplete
             type="text"
             class="block border w-full p-[15px] focus:border-blue-400 outline-none"
             placeholder="Enter your email"
@@ -45,6 +46,7 @@ const loginUser = () => {
           <label class="mb-2" for="">Password</label>
           <input
             v-model="userData.password"
+            autocomplete
             type="text"
             class="block border w-full p-[15px] focus:border-blue-400 outline-none"
             placeholder="Enter your password"
